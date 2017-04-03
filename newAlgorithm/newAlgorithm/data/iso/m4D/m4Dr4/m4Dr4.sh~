@@ -1,0 +1,15 @@
+#! /bin/bash
+
+preA="m4D_A"
+preB="m4D_B"
+r=0
+for((num=1000;num<3700;num=num+100))
+	do 
+		filenameA=${preA}${num}	
+		filenameB=${preB}${num}	
+		edges=$[$num*$r/10]
+		echo $edges
+		./genm4D $num $edges $filenameA $filenameB
+	done
+
+
